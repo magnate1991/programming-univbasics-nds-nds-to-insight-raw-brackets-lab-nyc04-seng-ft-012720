@@ -1,4 +1,4 @@
-require 'pp'
+require 'yaml'
 
 
 def directors_database
@@ -6,10 +6,3 @@ def directors_database
   @_db ||= YAML.load(rot13.call(File.open("directors_db").read.to_s))
 end
 
-pp directors_database
-hash = {
-  "1st Director's Name"=>1234567890,
-  "2nd Director's Name"=>1234577890,
-  "3rd Director's Name"=>1234709136,
-  ...
-}
